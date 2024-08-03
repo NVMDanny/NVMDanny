@@ -171,14 +171,14 @@ TPSection:NewButton("SurvivorsSafeHouse", "Tp to SurvivorsSafeHoused", function(
 local object = "Part"
 local pos = p1.CFrame
 
-p1.CFrame = game.Workspace.LocationsFolder.SurvivorsSafeHouse.Construction.Bed.InvWedge.CFrame
+p1.CFrame = game.Workspace.LocationsFolder.SurvivorsSafeHouse.Bed.Blanket.CFrame
 end)
 TPSection:NewButton("ParkSafeHouse", "Tp to ParkSafeHouse", function()
  local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
 local object = "Part"
 local pos = p1.CFrame
 
-p1.CFrame = game.Workspace.LocationsFolder.ParkSafeHouse.Construction.Bed.InvWedge.CFrame
+p1.CFrame = game.Workspace.LocationsFolder.ParkSafeHouse.Bed.Blanket.CFrame
 end)
 TPSection:NewButton("SupplyDrop", "Tp to SupplyDrop", function()
 local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -595,9 +595,11 @@ TextLabel.TextStrokeTransparency = 0
 TextLabel.TextSize = 8
 TextLabel.TextWrapped = true
 end)
-ESPSection:NewButton("SafeHouse (Park)", "You can see SafeHouse in the distance", function()
-text = "SafeHouse (Park)"
-item = game:GetService("Workspace").LocationsBillboardGuis.ParkSafeHouse
+
+
+ESPSection:NewButton("SafeHouse (ParkSafeHouse)", "You can see SafeHouse in the distance", function()
+text = "SafeHouse (ParkSafeHouse)"
+item = game:GetService("Workspace").LocationsFolder.ParkSafeHouse.RakePos_PSH1
 local BillboardGui = Instance.new("BillboardGui")
 local TextLabel = Instance.new("TextLabel")
 BillboardGui.Parent = item
@@ -690,7 +692,7 @@ TextLabel.TextWrapped = true
 end)
 ESPSection:NewButton("SafeHouse (Survivors)", "You can see SafeHouse in the distance", function()
 text = "SafeHouse (Survivors)"
-item = game:GetService("Workspace").LocationsBillboardGuis.SurvivorsSafeHousePart
+item = game:GetService("Workspace").LocationsFolder.BreakableRoof
 local BillboardGui = Instance.new("BillboardGui")
 local TextLabel = Instance.new("TextLabel")
 BillboardGui.Parent = item
